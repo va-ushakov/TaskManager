@@ -1,0 +1,23 @@
+databaseChangeLog:
+  - changeSet:
+      id: USERS-create
+      author: uv
+      changes:
+        - createTable:
+            tableName: USERS
+            columns:
+              - column:
+                  name: ID
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+              - column:
+                  name: USERNAME
+                  type: varchar2(255)
+              - column:
+                  name: PASSWORD
+                  type: varchar2(255)
+      rollback:
+        - dropTable:
+            tableName: USERS

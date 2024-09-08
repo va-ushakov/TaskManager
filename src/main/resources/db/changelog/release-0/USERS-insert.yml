@@ -1,0 +1,41 @@
+databaseChangeLog:
+  - changeSet:
+      id: USERS-insert
+      author: uv
+      changes:
+        - insert:
+            tableName: USERS
+            columns:
+              - column:
+                  name: USERNAME
+                  value: aname
+              - column:
+                  name: PASSWORD
+                  value: password
+        - insert:
+            tableName: USERS
+            columns:
+              - column:
+                  name: USERNAME
+                  value: bname
+              - column:
+                  name: PASSWORD
+                  value: password
+        - insert:
+            tableName: USERS
+            columns:
+              - column:
+                  name: USERNAME
+                  value: cname
+              - column:
+                  name: PASSWORD
+                  value: password
+        - insert:
+            tableName: USERS
+            columns:
+              - column:
+                  name: USERNAME
+                  value: yname
+              - column:
+                  name: PASSWORD
+                  value: password

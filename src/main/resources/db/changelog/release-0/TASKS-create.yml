@@ -1,0 +1,35 @@
+databaseChangeLog:
+  - changeSet:
+      id: TASKS-create
+      author: uv
+      changes:
+        - createTable:
+            tableName: TASKS
+            columns:
+              - column:
+                  name: ID
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+              - column:
+                  name: NAME
+                  type: varchar2(255)
+              - column:
+                  name: DESCRIPTION
+                  type: varchar2(255)
+              - column:
+                  name: PRIORITY
+                  type: varchar2(255)
+              - column:
+                  name: STATUS
+                  type: varchar2(255)
+              - column:
+                  name: USER_ID
+                  type: bigint
+                  constraints:
+                    references: users(id)
+                    foreignKeyName: tasks_userid_users_id
+      rollback:
+        - dropTable:
+            tableName: USERS

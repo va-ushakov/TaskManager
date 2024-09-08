@@ -1,0 +1,59 @@
+databaseChangeLog:
+  - changeSet:
+      id: TASKS-insert
+      author: uv
+      changes:
+        - insert:
+            tableName: TASKS
+            columns:
+              - column:
+                  name: name
+                  value: taskName1
+              - column:
+                  name: description
+                  value: taskDescription1
+              - column:
+                  name: status
+                  value: PLANNED
+              - column:
+                  name: priority
+                  value: HIGH
+              - column:
+                  name: user_id
+                  value: 1
+        - insert:
+            tableName: TASKS
+            columns:
+              - column:
+                  name: name
+                  value: taskName2
+              - column:
+                  name: description
+                  value: taskDescription2
+              - column:
+                  name: status
+                  value: COMPLETE
+              - column:
+                  name: priority
+                  value: LOW
+              - column:
+                  name: user_id
+                  value: 2
+        - insert:
+            tableName: TASKS
+            columns:
+              - column:
+                  name: name
+                  value: taskName3
+              - column:
+                  name: description
+                  value: taskDescription3
+              - column:
+                  name: status
+                  value: PLANNED
+              - column:
+                  name: priority
+                  value: HIGH
+              - column:
+                  name: user_id
+                  value: 3
